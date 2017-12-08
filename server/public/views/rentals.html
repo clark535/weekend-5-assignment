@@ -1,0 +1,40 @@
+<h1>Heroes Page</h1>
+<h1 ng-controller="HeroesController as vm">Heroes</h1>
+<input type="text" placeholder="New Hero Name" ng-model="vm.newHero.name">
+<textarea type="text" placeholder="New Backstory" ng-model="vm.newHero.backstory"></textarea>
+<button ng-click="vm.addNewHero(vm.newHero)">Add new hero</button>
+{{vm.newHero}}
+<div>
+<table>
+    <thead>
+        <tr>
+            <th>
+                 Hero
+            </th>
+            <th>
+                Power
+            </th>
+            <th>
+                Edit
+            </th>
+            <th>
+                Save
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="hero in vm.heroes.list">
+            <td>
+                <h3>{{hero.name}}</h3>
+                <input ng-if="hero.isEditable" type="text" ng-model="hero.name"></td>
+            <td>
+                <p>{{hero.array_agg}}</p>
+                <textarea ng-if="hero.isEditable" type="text" placeholder="New Hero Backstory" ng-model="hero.backstory"></textarea>            
+            </td>
+            <td><button ng-click="hero.isEditable = !hero.isEditable">Edit</button></td>
+            <!-- this is how to show/hide on a button click -->
+            <td><button ng-click="vm.deleteHeroes(hero)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
