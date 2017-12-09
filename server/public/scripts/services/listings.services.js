@@ -16,23 +16,22 @@ app.service('ListingsService', ['$http', function($http){
          });
          }
 
-    //      self.addNewGame = function(newGame) {
-    //         console.log('post button was clicked')
-    //         $http({
-    //             method: 'POST',
-    //             url: '/game',
-    //             data: newGame       
-    //             }).then(function(response) {
-    //                 console.log('response', response);
-    //                 self.newGame = response.data;
-    //                 self.newGame = {};
-    //                 self.getGames();
-    //                 newGame.name = '',
-    //                 newGame.duration = '';
-    //                 newGame.numberOfPlayers = ''; 
-    //                 newGame.publishedDate = '';  
-    //             })
-    //         };
-    self.getListings();
+         self.addNewListing = function(newListing) {
+            console.log('post button was clicked')
+            $http({
+                method: 'POST',
+                url: '/listings',
+                data: newListing       
+                }).then(function(response) {
+                    console.log('response', response);
+                    //self.newListing = response.data;
+                    //self.newGame = {};
+                    self.getListings();
+                    newListing.cost = '',
+                    newListing.sqft = '';
+                    newListing.city = '';   
+                })
+            };
+    //self.getListings();
 
 }]);

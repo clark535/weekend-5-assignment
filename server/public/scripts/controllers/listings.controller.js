@@ -3,7 +3,7 @@ app.controller('ListingsController', ['ListingsService', function(ListingsServic
 
     console.log(ListingsService.listings);
     self.listings = ListingsService.listings;//links view and service.
-    // GamesService.getGames();
-    // self.addNewGame = GamesService.addNewGame;
+    ListingsService.getListings();
+    self.addNewListing = ListingsService.addNewListing;
     // self.deleteHeroes = HeroesService.deleteHeroes;
 }]);

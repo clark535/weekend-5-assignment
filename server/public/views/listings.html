@@ -1,14 +1,15 @@
 <h1>Listings Page</h1>
 <h1 ng-controller="ListingsController as vm">Listings</h1>
-<!-- <input type="text" placeholder="New Hero Nam" ng-model="vm.newHero.name">
-<textarea type="text" placeholder="New Backstory" ng-model="vm.newHero.backstory"></textarea>
-<button ng-click="vm.addNewHero(vm.newHero)">Add new hero</button> -->
+<input type="number" placeholder="New Property Cost" ng-model="vm.newListing.cost">
+<input type="number" placeholder="Square Footage" ng-model="vm.newListing.sqft">
+<input type="text" placeholder="New Property City" ng-model="vm.newListing.city">
+<button ng-click="vm.addNewListing(vm.newListing)">Add new Listing</button>
 <div>
-<table>
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>
-                 Cost
+                 Sale Price
             </th>
             <th>
                 Square Footage

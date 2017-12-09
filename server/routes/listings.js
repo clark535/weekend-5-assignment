@@ -14,18 +14,18 @@ router.get('/', function(req, res){
     });
 });
 
-// router.post('/', function(req, res){
-//     // a get request for all games
-//     var addGame = new Game(req.body);
+router.post('/', function(req, res){
+    // a get request for all games
+    var addListing = new Listing(req.body);
 
-//     addGame.save(function(errorMakingDatabaseQuery, data){
-//         if (errorMakingDatabaseQuery) {
-//             console.log('error with game save', errorMakingDatabaseQuery);
-//             res.sendStatus(500);
-//         } else {
-//             res.sendStatus(201);
-//         }
-//     });
-// });
+    addListing.save(function(errorMakingDatabaseQuery, data){
+        if (errorMakingDatabaseQuery) {
+            console.log('error with Listing post', errorMakingDatabaseQuery);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(201);
+        }
+    });
+});
 
 module.exports = router;
