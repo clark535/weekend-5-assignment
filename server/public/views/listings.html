@@ -1,39 +1,38 @@
-<h1>Heroes Page</h1>
-<h1 ng-controller="HeroesController as vm">Heroes</h1>
-<input type="text" placeholder="New Hero Name" ng-model="vm.newHero.name">
+<h1>Listings Page</h1>
+<h1 ng-controller="ListingsController as vm">Listings</h1>
+<!-- <input type="text" placeholder="New Hero Nam" ng-model="vm.newHero.name">
 <textarea type="text" placeholder="New Backstory" ng-model="vm.newHero.backstory"></textarea>
-<button ng-click="vm.addNewHero(vm.newHero)">Add new hero</button>
-{{vm.newHero}}
+<button ng-click="vm.addNewHero(vm.newHero)">Add new hero</button> -->
 <div>
 <table>
     <thead>
         <tr>
             <th>
-                 Hero
+                 Cost
             </th>
             <th>
-                Power
+                Square Footage
             </th>
             <th>
-                Edit
-            </th>
-            <th>
-                Save
+                City
             </th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="hero in vm.heroes.list">
+        <tr ng-repeat="sale in vm.listings.list">
             <td>
-                <h3>{{hero.name}}</h3>
-                <input ng-if="hero.isEditable" type="text" ng-model="hero.name"></td>
+                <h3>{{sale.cost}}</h3>
+                <!-- <input ng-if="hero.isEditable" type="text" ng-model="hero.name"></td> -->
             <td>
-                <p>{{hero.array_agg}}</p>
-                <textarea ng-if="hero.isEditable" type="text" placeholder="New Hero Backstory" ng-model="hero.backstory"></textarea>            
+                <p>{{sale.sqft}}</p>
+                <!-- <textarea ng-if="hero.isEditable" type="text" placeholder="New Hero Backstory" ng-model="hero.backstory"></textarea>             -->
             </td>
-            <td><button ng-click="hero.isEditable = !hero.isEditable">Edit</button></td>
+            <td>
+                <p>{{sale.city}}</p>
+            </td>
+            <!-- <td><button ng-click="hero.isEditable = !hero.isEditable">Edit</button></td> -->
             <!-- this is how to show/hide on a button click -->
-            <td><button ng-click="vm.deleteHeroes(hero)">Delete</button></td>
+            <!-- <td><button ng-click="vm.deleteHeroes(hero)">Delete</button></td> -->
         </tr>
     </tbody>
 </table>

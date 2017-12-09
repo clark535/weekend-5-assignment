@@ -1,20 +1,20 @@
 app.service('ListingsService', ['$http', function($http){
     var self = this;
 
-    // self.games = {list: [] };
+    self.listings = {list: [] };
     
    
 
-    //     self.getGames = function() {
+        self.getListings = function() {
     
-    //         $http({
-    //          method: 'GET',
-    //          url: '/game'         
-    //          }).then(function(response) {
-    //              console.log('response', response);
-    //              self.games.list = response.data;//this fills up the companies array with the table from the database.
-    //      });
-    //      }
+            $http({
+             method: 'GET',
+             url: '/listings'         
+             }).then(function(response) {
+                 console.log('response', response);
+                 self.listings.list = response.data;//this fills up the companies array with the table from the database.
+         });
+         }
 
     //      self.addNewGame = function(newGame) {
     //         console.log('post button was clicked')
@@ -33,6 +33,6 @@ app.service('ListingsService', ['$http', function($http){
     //                 newGame.publishedDate = '';  
     //             })
     //         };
-         //self.getGames();
+    self.getListings();
 
 }]);

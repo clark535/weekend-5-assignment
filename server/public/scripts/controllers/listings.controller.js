@@ -2,7 +2,7 @@ app.controller('ListingsController', ['ListingsService', function(ListingsServic
     var self = this;
 
     console.log(ListingsService.listings);
-    // self.games = GamesService.games;//links view and service.
+    self.listings = ListingsService.listings;//links view and service.
     // GamesService.getGames();
     // self.addNewGame = GamesService.addNewGame;
     // self.deleteHeroes = HeroesService.deleteHeroes;

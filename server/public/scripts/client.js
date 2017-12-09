@@ -1,7 +1,7 @@
 var app = angular.module('PropertyApp', ['ngRoute']);
 
 app.config(function($routeProvider) {
-    $routeProvider.when('/', {
+    $routeProvider.when('/listings', {
         templateUrl: '/views/listings.html',
         controller: 'ListingsController as vm'
     }).when('/rentals', {
