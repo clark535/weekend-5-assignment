@@ -1,39 +1,36 @@
-<h1>Heroes Page</h1>
-<h1 ng-controller="HeroesController as vm">Heroes</h1>
-<input type="text" placeholder="New Hero Name" ng-model="vm.newHero.name">
-<textarea type="text" placeholder="New Backstory" ng-model="vm.newHero.backstory"></textarea>
-<button ng-click="vm.addNewHero(vm.newHero)">Add new hero</button>
-{{vm.newHero}}
+<h1>Rentals Page</h1>
+<h1 ng-controller="RentalsController as vm">Rentals</h1>
+<input type="number" placeholder="New Rent cost" ng-model="vm.newRental.rent">
+<input type="number" placeholder="Square Footage" ng-model="vm.newRental.sqft">
+<input type="text" placeholder="New Rental City" ng-model="vm.newRental.city">
+<button ng-click="vm.addNewRental(vm.newRental)">Add new Rental</button>
+{{vm.newRental}}
 <div>
-<table>
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>
-                 Hero
+                 Rent
             </th>
             <th>
-                Power
+                Square Footage
             </th>
             <th>
-                Edit
-            </th>
-            <th>
-                Save
+                City
             </th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="hero in vm.heroes.list">
+        <tr ng-repeat="rent in vm.rentals.list">
             <td>
-                <h3>{{hero.name}}</h3>
-                <input ng-if="hero.isEditable" type="text" ng-model="hero.name"></td>
+                <h3>{{rent.rent}}</h3>
+            </td>    
             <td>
-                <p>{{hero.array_agg}}</p>
-                <textarea ng-if="hero.isEditable" type="text" placeholder="New Hero Backstory" ng-model="hero.backstory"></textarea>            
+                <p>{{rent.sqft}}</p>
             </td>
-            <td><button ng-click="hero.isEditable = !hero.isEditable">Edit</button></td>
-            <!-- this is how to show/hide on a button click -->
-            <td><button ng-click="vm.deleteHeroes(hero)">Delete</button></td>
+            <td>
+                <p>{{rent.city}}</p>
+            </td>
         </tr>
     </tbody>
 </table>
