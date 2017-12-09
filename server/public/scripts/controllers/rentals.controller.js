@@ -5,5 +5,5 @@ app.controller('RentalsController', ['RentalsService', function(RentalsService){
     self.rentals = RentalsService.rentals;//links view and service.
     RentalsService.getRentals();
     self.addNewRental = RentalsService.addNewRental;
-    // self.deleteHeroes = HeroesService.deleteHeroes;
+    self.deleteRentals = RentalsService.deleteRentals;
 }]);

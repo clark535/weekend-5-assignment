@@ -32,6 +32,16 @@ app.service('ListingsService', ['$http', function($http){
                     newListing.city = '';   
                 })
             };
-    //self.getListings();
+
+        self.deleteListings = function(deleteListings) {
+            console.log('delete listings button was clicked')
+            $http({
+                method: 'DELETE',
+                url: '/listings',
+                params: deleteListings       
+                }).then(function(response) {  
+                    self.getListings();           
+                })
+            };
 
 }]);

@@ -5,5 +5,5 @@ app.controller('ListingsController', ['ListingsService', function(ListingsServic
     self.listings = ListingsService.listings;//links view and service.
     ListingsService.getListings();
     self.addNewListing = ListingsService.addNewListing;
-    // self.deleteHeroes = HeroesService.deleteHeroes;
+    self.deleteListings = ListingsService.deleteListings;
 }]);

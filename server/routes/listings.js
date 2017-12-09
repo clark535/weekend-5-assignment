@@ -28,4 +28,17 @@ router.post('/', function(req, res){
     });
 });
 
+router.delete('/', function(req, res){
+    //var deleteListings = req.query.id;
+    
+        Listing.findByIdAndRemove(req.query._id, function(errorMakingDatabaseQuery, data){
+                if (errorMakingDatabaseQuery) {
+                    console.log('error with Listing delete', errorMakingDatabaseQuery);
+                    res.sendStatus(500);
+                } else {
+                    res.sendStatus(200);
+                }
+            });
+  });//end database delete 
+
 module.exports = router;

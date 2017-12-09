@@ -23,17 +23,13 @@
         <tr ng-repeat="sale in vm.listings.list">
             <td>
                 <h3>{{sale.cost}}</h3>
-                <!-- <input ng-if="hero.isEditable" type="text" ng-model="hero.name"></td> -->
             <td>
                 <p>{{sale.sqft}}</p>
-                <!-- <textarea ng-if="hero.isEditable" type="text" placeholder="New Hero Backstory" ng-model="hero.backstory"></textarea>             -->
             </td>
             <td>
                 <p>{{sale.city}}</p>
             </td>
-            <!-- <td><button ng-click="hero.isEditable = !hero.isEditable">Edit</button></td> -->
-            <!-- this is how to show/hide on a button click -->
-            <!-- <td><button ng-click="vm.deleteHeroes(hero)">Delete</button></td> -->
+            <td><button ng-click="vm.deleteListings(sale)">Delete</button></td>
         </tr>
     </tbody>
 </table>
