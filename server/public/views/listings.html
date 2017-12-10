@@ -1,9 +1,13 @@
-<h1>Listings Page</h1>
-<h1 ng-controller="ListingsController as vm">Listings</h1>
+<h1>For Sale</h1>
+<div class="container">
+<image src="images/for_sale.jpg"></image>
+</div>
+<h1 ng-controller="ListingsController as vm">Add a Property For Sale</h1>
 <input type="number" placeholder="New Property Cost" ng-model="vm.newListing.cost">
 <input type="number" placeholder="Square Footage" ng-model="vm.newListing.sqft">
 <input type="text" placeholder="New Property City" ng-model="vm.newListing.city">
-<button ng-click="vm.addNewListing(vm.newListing)">Add new Listing</button>
+<button class="bg-primary" ng-click="vm.addNewListing(vm.newListing)">Add new Listing</button>
+{{vm.newListing}}
 <div>
 <table class="table table-bordered">
     <thead>
@@ -29,7 +33,7 @@
             <td>
                 <p>{{sale.city}}</p>
             </td>
-            <td><button ng-click="vm.deleteListings(sale)">Delete</button></td>
+            <td><button class="bg-danger" ng-click="vm.deleteListings(sale)">Delete</button></td>
         </tr>
     </tbody>
 </table>

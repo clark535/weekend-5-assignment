@@ -1,9 +1,12 @@
-<h1>Rentals Page</h1>
-<h1 ng-controller="RentalsController as vm">Rentals</h1>
+<h1>For Rent</h1>
+<div class="container">
+    <image src="images/for_rent.jpg"></image>
+    </div>
+<h1 ng-controller="RentalsController as vm">Add a Property For Rent</h1>
 <input type="number" placeholder="New Rent cost" ng-model="vm.newRental.rent">
 <input type="number" placeholder="Square Footage" ng-model="vm.newRental.sqft">
 <input type="text" placeholder="New Rental City" ng-model="vm.newRental.city">
-<button ng-click="vm.addNewRental(vm.newRental)">Add new Rental</button>
+<button class="bg-primary" ng-click="vm.addNewRental(vm.newRental)">Add new Rental</button>
 {{vm.newRental}}
 <div>
 <table class="table table-bordered">
@@ -31,7 +34,7 @@
             <td>
                 <p>{{rent.city}}</p>
             </td>
-            <td><button ng-click="vm.deleteRentals(rent)">Delete</button></td>
+            <td><button class="bg-danger" ng-click="vm.deleteRentals(rent)">Delete</button></td>
         </tr>
     </tbody>
 </table>
