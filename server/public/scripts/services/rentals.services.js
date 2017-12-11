@@ -14,7 +14,7 @@ app.service('RentalsService', ['$http', function($http){
                  console.log('response', response);
                  self.rentals.list = response.data;//this fills up the companies array with the table from the database.
          });
-         }
+         };//end function that trigger GET for rental array 
 
          self.addNewRental = function(newRental) {
             console.log('post button was clicked')
@@ -28,8 +28,8 @@ app.service('RentalsService', ['$http', function($http){
                     newRental.rent = '',
                     newRental.sqft = '';
                     newRental.city = '';   
-                })
-            };
+                });
+            };//end POST function that adds new rental property to rental array
         
         self.deleteRentals = function(deleteRentals) {
             console.log('delete button was clicked')
@@ -40,7 +40,7 @@ app.service('RentalsService', ['$http', function($http){
                 }).then(function(response) {  
                     self.getRentals();
                         
-                })
-            };
+                });
+            };//end DELETE function that removes a rental listing from the database
             
 }]);

@@ -10,4 +10,4 @@ app.config(function($routeProvider) {
     }).otherwise({
         template: '<h1>404</h1>'
     });
-});
+});//routes to the two pages for sale and rental

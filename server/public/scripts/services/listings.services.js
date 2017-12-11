@@ -14,7 +14,7 @@ app.service('ListingsService', ['$http', function($http){
                  console.log('response', response);
                  self.listings.list = response.data;//this fills up the companies array with the table from the database.
          });
-         }
+         };//end function that triggers GET from the database for the listings array
 
          self.addNewListing = function(newListing) {
             console.log('post button was clicked')
@@ -30,8 +30,8 @@ app.service('ListingsService', ['$http', function($http){
                     newListing.cost = '',
                     newListing.sqft = '';
                     newListing.city = '';   
-                })
-            };
+                });
+            };//end POST function that adds a new for sale property to the listings array
 
         self.deleteListings = function(deleteListings) {
             console.log('delete listings button was clicked')
@@ -41,7 +41,7 @@ app.service('ListingsService', ['$http', function($http){
                 params: deleteListings       
                 }).then(function(response) {  
                     self.getListings();           
-                })
-            };
+                });
+            };//end DELETE function that removes a property from the listings collection
 
 }]);

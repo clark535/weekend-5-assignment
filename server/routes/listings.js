@@ -12,7 +12,7 @@ router.get('/', function(req, res){
             res.send(data);
         }
     });
-});
+});//end GET for listings page
 
 router.post('/', function(req, res){
     // a get request for all games
@@ -26,7 +26,7 @@ router.post('/', function(req, res){
             res.sendStatus(201);
         }
     });
-});
+});//end POST for listings page
 
 router.delete('/', function(req, res){
     //var deleteListings = req.query.id;
@@ -39,6 +39,6 @@ router.delete('/', function(req, res){
                     res.sendStatus(200);
                 }
             });
-  });//end database delete 
+  });//end database delete for listings page 
 
 module.exports = router;

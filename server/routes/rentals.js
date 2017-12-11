@@ -12,7 +12,7 @@ router.get('/', function(req, res){
             res.send(data);
         }
     });
-});
+});//end GET for rentals page
 
 router.post('/', function(req, res){
     // a get request for all games
@@ -26,7 +26,7 @@ router.post('/', function(req, res){
             res.sendStatus(201);
         }
     });
-});
+});//end POST for rentals page
 
 router.delete('/', function(req, res){
     //var deleteRentals = req.query;
@@ -39,7 +39,7 @@ router.delete('/', function(req, res){
                     res.sendStatus(200);
                 }
             });
-  });//end database delete 
+  });//end database for rentals page delete 
 
 
 module.exports = router;
