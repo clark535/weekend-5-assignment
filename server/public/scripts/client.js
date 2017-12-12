@@ -8,6 +8,6 @@ app.config(function($routeProvider) {
         templateUrl: '/views/rentals.html',
         controller: 'RentalsController as vm'
     }).otherwise({
-        template: '<h1>404</h1>'
+        redirectTo: '/listings'//change to a redirect
     });
 });//routes to the two pages for sale and rental
