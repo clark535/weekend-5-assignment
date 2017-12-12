@@ -12,7 +12,7 @@ if(process.env.MONGODB_URI != undefined) {
     mongoURI = 'mongodb://localhost:27017/realestate';
 }
 
-mongoose.connect(databaseUrl, {
+mongoose.connect(mongoURI, {
   useMongoClient: true
 });
 
