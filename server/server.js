@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var listings = require('./routes/listings');
 var rentals = require('./routes/rentals');
-var mongooseConnection = require('./modules/realestate-connections.js');
+require('./modules/realestate-connections.js');
 //var game = require('./routes/game.js');
 
 var app = express();
@@ -12,7 +12,7 @@ app.use(express.static('server/public'));
 app.use(bodyParser.json()); // needed for angular requests
 
 /** ---------- DATABASE CONNECTION ---------- **/
-mongooseConnection.connect(); // module to spin up mongoose
+ // module to spin up mongoose
 
 /** ---------- EXPRESS ROUTES ---------- **/
 app.use('/listings', listings);
